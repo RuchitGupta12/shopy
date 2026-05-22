@@ -1,5 +1,4 @@
 # Shopy ECommerce Website
-![shopy](/template/images/shopy.jpg)
 
 # React & Node Tutorial - Full ECommerce in 9 Hours [2021]
 Welcome to Shopy — a fully-functional e-commerce website built with the MERN stack (MongoDB, ExpressJS, React and Node.JS).
@@ -17,6 +16,9 @@ Welcome to Shopy — a fully-functional e-commerce website built with the MERN s
 - Watch React & Node Tutorial
 
 ## Run Locally
+
+<img width="1893" height="860" alt="image" src="https://github.com/user-attachments/assets/f5ca56f0-3595-478f-ac11-c0a003c018e4" />
+
 
 ### 1. Clone repo
 
