@@ -4,10 +4,6 @@
 # React & Node Tutorial - Full ECommerce in 9 Hours [2021]
 Welcome to Shopy — a fully-functional e-commerce website built with the MERN stack (MongoDB, ExpressJS, React and Node.JS).
 
-## Demo Website
-
-- 👉 Heroku : [https://shopy.herokuapp.com](https://shopy.herokuapp.com)
-
 
 ## You Will Learn
 
@@ -25,7 +21,7 @@ Welcome to Shopy — a fully-functional e-commerce website built with the MERN s
 ### 1. Clone repo
 
 ```
-$ git clone git@github.com:ruchit2802/shopy.git
+$ git clone https://github.com/RuchitGupta12/shopy
 $ cd shopy
 ```
 
@@ -67,11 +63,6 @@ $ npm start
 
 - Run http://localhost:3000/signin
 - Enter admin email and password and click signin
-
-## Support
-
-- Q/A: https://webacademy.pro/shopy
-- Contact Instructor: [Basir](mailto:basir.jafarzadeh@gmail.com)
 
 ## Lessons
 

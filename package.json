@@ -1,0 +1,41 @@
+{
+  "name": "shopy",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Ecommerce website like Myntra",
+  "main": "index.js",
+  "scripts": {
+    "build": "cd frontend && npm install && npm run build",
+    "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/basir/shopy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/basir/shopy/issues"
+  },
+  "homepage": "https://github.com/basir/shopy#readme",
+  "devDependencies": {
+    "eslint": "^7.9.0",
+    "eslint-plugin-react": "^7.21.2",
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-async-handler": "^1.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mailgun-js": "^0.22.0",
+    "mongoose": "^6.0.13",
+    "multer": "^1.4.3",
+    "socket.io": "^4.4.0",
+    "@stripe/react-stripe-js": "^6.4.0",
+    "@stripe/stripe-js": "^9.6.0",
+    "react-stripe-checkout": "^2.6.3",
+    "stripe": "^22.1.1"
+  }
+}
