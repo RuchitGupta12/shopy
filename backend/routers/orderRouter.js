@@ -178,25 +178,29 @@ orderRouter.put(
 
         const updatedOrder = await order.save();
         try {
-          mailgun()
-            .messages()
-            .send(
-              {
-                from: 'Shopy <shopy@mg.yourdomain.com>',
-                to: `${order.user.name} <${order.user.email}>`,
-                subject: `New order ${order._id}`,
-                html: payOrderEmailTemplate(order),
-              },
-              (error, body) => {
-                if (error) {
-                  console.log(error);
-                } else {
-                  console.log(body);
+          if (process.env.MAILGUN_API_KEY) {
+            mailgun()
+              .messages()
+              .send(
+                {
+                  from: 'Shopy <shopy@mg.yourdomain.com>',
+                  to: `${order.user.name} <${order.user.email}>`,
+                  subject: `New order ${order._id}`,
+                  html: payOrderEmailTemplate(order),
+                },
+                (error, body) => {
+                  if (error) {
+                    console.log('Mailgun error:', error);
+                  } else {
+                    console.log('Email sent:', body);
+                  }
                 }
-              }
-            );
+              );
+          } else {
+            console.log('Mailgun not configured — skipping order confirmation email');
+          }
         } catch (err) {
-          console.log(err);
+          console.log('Email send failed:', err.message);
         }
         res.send({ message: 'Order Paid', order: updatedOrder });
       } catch (error) {
