@@ -146,7 +146,10 @@ io.on('connection', (socket) => {
 
 async function start() {
   try {
-    await mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost/shopy');
+    const url = process.env.MONGODB_URL || 'mongodb://localhost/shopy';
+    const masked = url.replace(/\/\/[^:]+:[^@]+@/, '//USER:PASS@');
+    console.log('MONGODB_URL:', masked);
+    await mongoose.connect(url);
     console.log('DB connected');
     httpServer.listen(port, () => {
       console.log(`Serve at http://localhost:${port}`);
